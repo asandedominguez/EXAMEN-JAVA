@@ -6,8 +6,7 @@ import java.util.Iterator;
  * Clase Futbolista que herda as propiedades da clase nai 'Persoa'.
  * Implementa 'Comparable' para definir un criterio de ordenación natural por defecto (o DNI).
  */
-public class Futbolista extends Persoa implements Comparable<Futbolista> {
-
+public class Futbolista extends Persoa {
     // Atributo privado e encapsulado específico da clase Futbolista
     private int numGoles;
 
@@ -63,7 +62,7 @@ public class Futbolista extends Persoa implements Comparable<Futbolista> {
      * Devolve o resultado de comparar alfabeticamente os DNIs de ambos futbolistas.
      */
     @Override
-    public int compareTo(Futbolista otro) {
+    public int compareTo(Persoa otro) {
         return this.getDni().compareTo(otro.getDni());
     }
 

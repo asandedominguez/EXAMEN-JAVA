@@ -63,6 +63,12 @@ public class Persoa implements Comparable<Persoa>{
     public void mostrarDatos() {
         System.out.println("Nome: " + nome + " Dni: " + dni + " Edade: " + edade + " Estatura: " + estatura);
     }
+    public double getEstatura() {
+        return this.estatura;
+    }
+    public void setEstatura(double estatura) {
+        this.estatura = estatura;
+    }
 
     /**
      * Sobrescribe o método equals herdado de Object.
