@@ -5,7 +5,7 @@ public class Ajenda {
     // Matriz de cadeas de texto (String) que almacenará a táboa do horario
     private String[][] tabla;
 
-    // Construtor da clase que recibe unha matriz e inicializa o atributo 'tabla'
+    // Construtor da clase que recebe unha matriz e inicializa o atributo 'tabla'
     public Ajenda(String[][] tabla){
         this.tabla = tabla;
     }
@@ -14,16 +14,16 @@ public class Ajenda {
     public void amosarHorario() {
         // Array cos nomes dos días correspondentes a cada fila (índices 0 a 4)
         String[] dias = {"Luns", "Martes", "Mércores", "Xoves", "Venres"};
-        
+
         // Imprime a cabeceira coas etiquetas das horas
         System.out.println("\n\t[H0]\t\t[H1]\t\t[H2]\t\t[H3]\t\t[H4]");
         System.out.println("---------------------------------------------------------------------------------");
-        
+
         // Bucle externo: percorre cada fila da matriz (cada día da semana)
         for (int i = 0; i < tabla.length; i++) {
             // Imprime o índice e o nome do día correspondente
             System.out.print("[" + i + "] " + dias[i] + "\t");
-            
+
             // Bucle interno: percorre cada columna da fila actual (cada hora do día)
             for (int j = 0; j < tabla[i].length; j++) {
                 // Imprime a actividade da cela actual separada por tabuladores
@@ -99,10 +99,9 @@ public class Ajenda {
         // Executa a modificación
         a1.cambiarActividade(d, h, nova);
 
-        // e) Mostra o horario actualizado tras a modificación
+        // Mostra o horario actualizado tras a modificación
         System.out.println("\n=== HORARIO ACTUALIZADO ===");
         a1.amosarHorario();
-
 
         // 3. PROBA DE ENGADIR EN POSICIÓN VALEIRA (Exercicio C)
         System.out.println("--- ENGADIR ACTIVIDADE EXTRA EN HOCO VALEIRO ---");
@@ -118,16 +117,10 @@ public class Ajenda {
         // Intenta engadir a actividade controlando se o oco está libre
         a1.engadirExtra(dExtra, hExtra, extra);
 
-        // e) Mostra o horario actualizado tras a modificación final
+        // Mostra o horario actualizado tras a modificación final
         System.out.println("\n=== HORARIO FINAL ACTUALIZADO ===");
         a1.amosarHorario();
-    }
-}
 
-        a1.engadirExtra(dExtra, hExtra, extra);
-
-        // e) Mostra o horario actualizado tras a modificación
-        System.out.println("\n=== HORARIO FINAL ACTUALIZADO ===");
-        a1.amosarHorario();
+        teclado.close(); // Práctica recomendada: pechar o Scanner ao rematar
     }
 }
