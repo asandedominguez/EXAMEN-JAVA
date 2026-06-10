@@ -1,0 +1,6 @@
+Numero,Clase,Ocupado,Pasaxeiro
+1A,business,True,Ana Silva
+1B,business,False,None
+5C,preferente,True,Carlos Gomez
+12A,turista,True,Luis Fernandez
+12B,turista,False,None
