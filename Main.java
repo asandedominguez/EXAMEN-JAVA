@@ -1,16 +1,23 @@
-package examen;
+package examne2;
 
 public class Main {
-    public static void main(String[] args) {
-       ListinTelefonico miListin = new ListinTelefonico("Contactos de Trabajo");
-        Contactos c1 = new Contactos("Ana", "666555444", "Inditex");
-        miListin.addContacto(c1);
-        Contactos c2 = new Contactos("ALAN", "66678655444", "wazaaa");
-        miListin.addContacto(c2);
-        Contactos c3 = new Contactos("Ana", "666555444", "Inditex");
-      System.out.println("¿Se añadió la Ana repetida? " + miListin.addContacto(c3));
-        miListin.mostrarListaContactos("wazaaa");
-        miListin.geContactos("Ana");
+ public static void main(String[] args) {
+       Consecionario lista1 = new Consecionario("Aitor");
+       Vehiculo mercedes = new Vehiculo("SETA", "mercedes", "gt3", 1900);
+       Vehiculo porche = new Vehiculo("SA", "porche", "gt4", 1300);
+       lista1.añadirVehiculo(mercedes);
+       lista1.añadirVehiculo(porche);
+       Vehiculo copia = new Vehiculo("SETA", "mercedes", "gt3", 1900);
+       lista1.añadirVehiculo(copia); 
+       System.out.println(lista1.buscarVehiculo("SA"));
+       System.out.println(lista1.listaVehiculos);
+       lista1.eliminarVehiculo(mercedes);
+       System.out.println(lista1.listaVehiculos);
+
+
+
     }
+    
+
 
 }
